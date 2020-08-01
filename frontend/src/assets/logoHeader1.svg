@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 154.50253 502.20715" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <filter id="h" x="-.24819" y="-.41321" width="1.4964" height="1.8264">
+   <feGaussianBlur stdDeviation="4.8604"/>
+  </filter>
+  <filter id="g" x="-.09791" y="-.22126" width="1.1958" height="1.4425">
+   <feGaussianBlur stdDeviation="2.9233"/>
+  </filter>
+  <linearGradient id="a">
+   <stop stop-color="#fff" offset="0"/>
+   <stop stop-color="#585858" offset="1"/>
+  </linearGradient>
+  <linearGradient id="f" x1="293.96" x2="403.61" gradientUnits="userSpaceOnUse">
+   <stop stop-opacity=".6718" offset="0"/>
+   <stop stop-color="#6f6f6f" stop-opacity=".4" offset=".1086"/>
+   <stop stop-color="#fff" stop-opacity=".687" offset=".2879"/>
+   <stop stop-color="#d2d2d2" stop-opacity=".3893" offset=".4847"/>
+   <stop stop-color="#9a9a9a" stop-opacity=".2824" offset=".6521"/>
+   <stop stop-opacity=".6947" offset="1"/>
+  </linearGradient>
+  <radialGradient id="d" cx="51.447" cy="404.83" r="89.799" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#fff" offset="0"/>
+   <stop stop-color="#e2e2e2" offset="1"/>
+  </radialGradient>
+  <radialGradient id="e" cx="54.447" cy="436.83" r="89.799" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+  <radialGradient id="c" cx="44.956" cy="322.87" r="90" gradientTransform="matrix(.88968 -.00498 -.01208 -.22386 293.01 390.09)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+  <radialGradient id="b" cx="44.956" cy="322.87" r="90" gradientTransform="matrix(.89611 .04976 -.01421 .25596 291.71 505.11)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+ </defs>
+ <g transform="translate(-273 -192.53)">
+  <path transform="matrix(.73099 0 0 .73099 292.93 297.97)" d="m165.46 439.65a89.449 89.449 0 1 1 -178.9 0 89.449 89.449 0 1 1 178.9 0z" fill="url(#e)"/>
+  <path d="m414.58 584.3c0 20.186-29.455 23.963-65.789 23.963s-65.789-3.7776-65.789-23.963 29.458-18.275 65.792-18.275 65.786-1.911 65.786 18.275z" fill="url(#b)"/>
+  <path d="m293.96 315.87h109.65v255.85c0 18.275-109.65 18.275-109.65 0z" fill="#fff"/>
+  <path d="m293.96 535.11c0-36.498 109.65-36.498 109.65-73.047v36.55c0 36.552-109.65 36.552-109.65 73.047z" fill="#000080" stroke="#808080" stroke-width=".73099"/>
+  <path d="m293.96 462.07c0-36.498 109.65-36.498 109.65-73.047v36.55c0 36.552-109.65 36.552-109.65 73.047z" fill="#f00" stroke="#808080" stroke-width=".73099"/>
+  <path d="m293.96 388.97c0-36.498 109.65-36.498 109.65-73.047v36.55c0 36.552-109.65 36.552-109.65 73.047z" fill="#000080" stroke="#808080" stroke-width=".73099"/>
+  <path d="m348.93 315.88h-54.961v36.55c0-18.278 27.503-27.403 54.961-36.55z" fill="#f00" stroke="#808080" stroke-width=".73099"/>
+  <path d="m317.93 583.24c0.50828 0.0799 0.94346 0.17586 1.462 0.25128 2.9447 0.42832 6.0621 0.7881 9.2745 1.0736s6.5182 0.49685 9.8912 0.63962 6.8074 0.22844 10.234 0.22844 6.8609-0.0857 10.234-0.22844 6.6789-0.35408 9.8912-0.63962 6.3298-0.64532 9.2745-1.0736 5.7223-0.91374 8.2922-1.4848 4.9249-1.2278 7.013-1.9417 3.9148-1.4962 5.4139-2.3529c0.74955-0.42831 1.4051-0.88375 1.9874-1.3478s1.0833-0.93944 1.4848-1.4391 0.70628-1.018 0.91374-1.5534c0.20192-0.52107 0.31424-1.0442 0.31981-1.599v-36.55c0 25.532-53.427 33.256-85.686 48.017z" fill="#f00" stroke="#808080" stroke-width=".73099"/>
+  <path d="m293.96 315.87h109.65v255.85c0 18.275-109.65 18.275-109.65 0z" fill="url(#f)" stroke="#4d4d4d" stroke-width=".51169"/>
+  <path transform="matrix(.73099 0 0 .73099 293.62 -53.466)" d="m165.46 439.65a89.449 89.449 0 1 1 -178.9 0 89.449 89.449 0 1 1 178.9 0z" fill="url(#d)"/>
+  <path d="m408.92 321.42c0-13.605-28.878-10.302-62.144-10.302s-58.323-3.3033-58.323 10.302 26.97 12.317 60.236 12.317 60.231 1.288 60.231-12.317z" fill="url(#c)"/>
+  <path transform="matrix(.73099 0 0 .73099 76.129 54.483)" d="m363.5 781.33c0 7.5939-16.021 12.392-29 8.25s-18-15.656-18-23.25 11.521-0.89214 24.5 3.25 22.5 4.1561 22.5 11.75z" fill="#fff" filter="url(#h)"/>
+  <path transform="matrix(.36455 -.1363 .09481 .52407 314.8 266.42)" d="m75-60.138a37.5 12.5 0 1 1 -75 0 37.5 12.5 0 1 1 75 0z" fill="#fff" filter="url(#g)"/>
+ </g>
+</svg>
