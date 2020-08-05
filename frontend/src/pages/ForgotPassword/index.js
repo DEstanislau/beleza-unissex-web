@@ -10,33 +10,33 @@ const schema = Yup.object().shape({
   email: Yup.string()
     .email('Insira um e-mail válido')
     .required('o Email é Obrigatório'),
-  password: Yup.string('Insira uma Senha Válida').required('Senha Obrigatória'),
 });
 
-export default function SignIn() {
+export default function ForgotPassword() {
   const dispatch = useDispatch();
   const loading = useSelector((state) => state.auth.loading);
 
-  function handleSubmit({ email, password }) {
-    dispatch(signInRequest(email, password));
+  function handleSubmit({ email }) {
+    dispatch(signInRequest(email));
   }
 
   return (
     <>
       <Form schema={schema} onSubmit={handleSubmit}>
-        <h1> Faça seu Login! </h1>
+        <h1> Recupere sua senha ! </h1>
         <div className="div-hr">
           <h2>
             {' '}
-            Caso tenha esquecido sua senha, fique a vontade para recupera-la
-            clicando <Link to="/forgotPassword"> aqui </Link>{' '}
+            Preencha o campo abaixo com seu email cadastrado que enviaremos sua
+            senha em alguns minutos :)
           </h2>
         </div>
         <Input name="email" type="email" placeholder="Email" />
-        <Input name="password" type="password" placeholder="Senha" />
 
-        <button type="submit">{loading ? 'Carregando...' : 'Acessar'}</button>
-        <Link to="/register"> Ainda não tem conta? Crie aqui!</Link>
+        <button type="submit">
+          {loading ? 'Carregando...' : 'Recuperar Senha'}
+        </button>
+        <Link to="/"> Voltar para Login </Link>
       </Form>
     </>
   );

@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { lighten } from 'polished';
 
 export const Container = styled.div`
-  max-width: 600px;
   margin: 50px auto;
 
   form {
@@ -37,27 +36,83 @@ export const Container = styled.div`
       background: rgba(0, 0, 0, 0.3);
       margin: 10px 0 20px;
     }
+  }
+`;
 
-    button {
-      margin: 5px 0 0;
-      height: 44px;
-      background: ${lighten(0.1, '#002f55')};
-      font-weight: bold;
-      color: #fff;
-      border: 0;
-      border-radius: 4px;
-      font-size: 16px;
-      transition: background 0.2s;
+export const Header = styled.div`
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+`;
 
-      &:hover {
-        background: #002f55;
-      }
+export const Body = styled.div`
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: center;
+
+  div.left {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin: 0 30px 0 30px;
+    max-width: 600px;
+  }
+
+  div.right {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin: 0 30px 0 30px;
+    max-width: 600px;
+  }
+
+  div.address-number {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+
+    input.nb1 {
+      width: 850px;
+      margin-right: 20px;
+    }
+
+    input.nb2 {
+      width: 60px;
+    }
+  }
+`;
+
+export const Bottom = styled.div`
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+
+  button.att {
+    margin: 10px;
+    height: 44px;
+    width: 300px;
+    background: ${lighten(0.1, '#002f55')};
+    font-weight: bold;
+    color: #fff;
+    border: 0;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background 0.2s;
+
+    &:hover {
+      background: #002f55;
     }
   }
 
-  > button {
-    width: 100%;
-    margin: 10px 0 0;
+  button.logout {
+    width: 300px;
+    margin: 10px;
     height: 44px;
     background: ${lighten(0.1, '#B22222')};
     font-weight: bold;

@@ -32,10 +32,11 @@ export function* signIn({ payload }) {
 
 export function* signUp({ payload }) {
   try {
-    const { name, email, password } = payload;
+    const { name, identifier, email, password } = payload;
 
     yield call(api.post, 'users', {
       name,
+      identifier,
       email,
       password,
       provider: true,
@@ -43,7 +44,7 @@ export function* signUp({ payload }) {
 
     history.push('/');
   } catch (err) {
-    toast.error('Falha no cadastro verifique seus dados!');
+    toast.error('Falha, verifique se seus dados já estão cadastrados ');
     yield put(signFailure());
   }
 }
