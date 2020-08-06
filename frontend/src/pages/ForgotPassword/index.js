@@ -16,8 +16,8 @@ export default function ForgotPassword() {
   const dispatch = useDispatch();
   const loading = useSelector((state) => state.auth.loading);
 
-  function handleSubmit({ email }) {
-    dispatch(signInRequest(email));
+  function handleSubmit({ email, identifier }) {
+    dispatch(signInRequest(email, identifier));
   }
 
   return (
@@ -27,10 +27,11 @@ export default function ForgotPassword() {
         <div className="div-hr">
           <h2>
             {' '}
-            Preencha o campo abaixo com seu email cadastrado que enviaremos sua
-            senha em alguns minutos :)
+            Preencha o campo abaixo com seus dados cadastrados que enviaremos
+            uma nova senha pelo email em alguns minutos :)
           </h2>
         </div>
+        <Input name="identifier" placeholder="CPF / CNPJ" />
         <Input name="email" type="email" placeholder="Email" />
 
         <button type="submit">

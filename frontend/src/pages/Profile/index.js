@@ -8,6 +8,8 @@ import { updateProfileRequest } from '~/store/modules/user/actions';
 import AvatarInput from './AvatarInput';
 import { Container, Header, Body, Bottom } from './styles';
 
+import { IoMdLogIn } from 'react-icons/io';
+
 export default function Profile() {
   const dispatch = useDispatch();
   const profile = useSelector((state) => state.user.profile);
@@ -18,6 +20,24 @@ export default function Profile() {
 
   function handleSignOut() {
     dispatch(signOut());
+  }
+
+  function handleOnChange() {
+    const oldPasswordInput = document.querySelector('input[name="oldPassword"');
+    const passwordInput = document.querySelector('input[name="password"');
+    const confirmPasswordInput = document.querySelector(
+      'input[name="confirmPassword"'
+    );
+
+    if (oldPasswordInput.value !== '') {
+      passwordInput.disabled = false;
+      confirmPasswordInput.disabled = false;
+    } else {
+      passwordInput.disabled = true;
+      passwordInput.value = '';
+      confirmPasswordInput.disabled = true;
+      confirmPasswordInput.value = '';
+    }
   }
 
   return (
@@ -37,12 +57,19 @@ export default function Profile() {
               type="password"
               name="oldPassword"
               placeholder="Senha atual"
+              onChange={handleOnChange}
             />
-            <Input type="password" name="password" placeholder="Nova Senha" />
+            <Input
+              type="password"
+              name="password"
+              placeholder="Nova Senha"
+              disabled={true}
+            />
             <Input
               name="confirmPassword"
               type="password"
               placeholder="Confirmar Senha"
+              disabled={true}
             />
           </div>
           <div className="right">
