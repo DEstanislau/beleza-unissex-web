@@ -3,14 +3,14 @@ import { darken } from 'polished';
 
 import backgroundImg from '~/assets/background.jpg';
 
-const exit = keyframes`
+const entry = keyframes`
   from {
 
-    transform: translateY(-450px);
+    opacity: 0;
   }
   to {
 
-    transform: translateY(0);
+    opacity: 1;
   }
 `;
 
@@ -36,7 +36,7 @@ export const Content = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    animation: 1s ${exit};
+    animation: 1s ${entry};
     animation-fill-mode: forwards;
 
     div.div-hr {

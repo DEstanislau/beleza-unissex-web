@@ -38,24 +38,22 @@ export default function SignUp() {
   }
 
   return (
-    <>
-      <Form schema={schema} onSubmit={handleSubmit}>
-        <h1> Preparado para Alavancar seu Negócio ? </h1>
-        <div className="div-hr">
-          <h2>
-            {' '}
-            Apresente seu trabalho para o mundo inteiro e receba clientes de
-            todos os lugares !
-          </h2>
-        </div>
-        <Input name="name" placeholder="Nome Completo" />
-        <Input name="identifier" placeholder="CPF / CNPJ" />
-        <Input name="email" type="email" placeholder="Email" />
-        <Input name="password" type="password" placeholder="Senha" />
+    <Form schema={schema} onSubmit={handleSubmit}>
+      <h1> Preparado para Alavancar seu Negócio ? </h1>
+      <div className="div-hr">
+        <h2>
+          {' '}
+          Apresente seu trabalho para o mundo inteiro e receba clientes de todos
+          os lugares !
+        </h2>
+      </div>
+      <Input name="name" placeholder="Nome Completo" />
+      <Input name="identifier" placeholder="CPF / CNPJ" />
+      <Input name="email" type="email" placeholder="Email" />
+      <Input name="password" type="password" placeholder="Senha" />
 
-        <button type="submit">Criar Conta</button>
-        <Link to="/"> Já tem conta? faça Login!</Link>
-      </Form>
-    </>
+      <button type="submit">Criar Conta</button>
+      <Link to="/"> Já tem conta? faça Login!</Link>
+    </Form>
   );
 }

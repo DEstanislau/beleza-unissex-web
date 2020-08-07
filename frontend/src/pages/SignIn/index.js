@@ -29,7 +29,7 @@ export default function SignIn() {
           <h2>
             {' '}
             Caso tenha esquecido sua senha, fique a vontade para recupera-la
-            clicando <Link to="/forgotPassword"> aqui </Link>{' '}
+            clicando <Link to="/reset"> aqui </Link>{' '}
           </h2>
         </div>
         <Input name="email" type="email" placeholder="Email" />

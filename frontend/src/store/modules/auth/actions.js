@@ -19,6 +19,13 @@ export function signUpRequest(name, identifier, email, password) {
   };
 }
 
+export function resetPassword(identifier, email) {
+  return {
+    type: '@auth/RESET_PASSWORD_REQUEST',
+    payload: { identifier, email },
+  };
+}
+
 export function signFailure() {
   return {
     type: '@auth/SIGN_IN_FAILURE',

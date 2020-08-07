@@ -2,7 +2,7 @@ import { takeLatest, call, put, all } from 'redux-saga/effects';
 import { toast } from 'react-toastify';
 import api from '~/services/api';
 import history from '~/services/history';
-import { signInSuccess, signFailure } from './actions';
+import { signInSuccess, signFailure, resetSuccess } from './actions';
 
 export function* signIn({ payload }) {
   try {
@@ -50,6 +50,22 @@ export function* signUp({ payload }) {
   }
 }
 
+export function* resetPasswordRequest({ payload }) {
+  try {
+    const { identifier, email } = payload;
+
+    yield call(api.put, 'reset', {
+      identifier,
+      email,
+    });
+
+    toast.success('Tudo certo! Instruções enviadas para seu email');
+    history.push('/');
+  } catch (err) {
+    toast.error('Falha na autenticação, verifique seu email/CPF');
+  }
+}
+
 export function setToken({ payload }) {
   if (!payload) return;
   const { token } = payload.auth;
@@ -67,4 +83,5 @@ export default all([
   takeLatest('@auth/SIGN_IN_REQUEST', signIn),
   takeLatest('@auth/SIGN_UP_REQUEST', signUp),
   takeLatest('@auth/SIGN_OUT', signOut),
+  takeLatest('@auth/RESET_PASSWORD_REQUEST', resetPasswordRequest),
 ]);

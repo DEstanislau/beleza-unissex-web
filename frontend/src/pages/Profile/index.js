@@ -8,8 +8,6 @@ import { updateProfileRequest } from '~/store/modules/user/actions';
 import AvatarInput from './AvatarInput';
 import { Container, Header, Body, Bottom } from './styles';
 
-import { IoMdLogIn } from 'react-icons/io';
-
 export default function Profile() {
   const dispatch = useDispatch();
   const profile = useSelector((state) => state.user.profile);
@@ -73,7 +71,7 @@ export default function Profile() {
             />
           </div>
           <div className="right">
-            <Input name="identifier" placeholder="CPF / CNPJ" />
+            <Input name="identifier" placeholder="CPF / CNPJ" disabled />
 
             <hr />
             <Input name="cep" placeholder="CEP" />
@@ -89,7 +87,7 @@ export default function Profile() {
             <Input name="district" placeholder="Bairro" />
             <div className="address-number">
               <Input className="nb1" name="city" placeholder="Cidade" />
-              <Input className="nb2" name="uf" placeholder="UF" />
+              <Input className="nb2" name="uf" placeholder="UF" maxLength="2" />
             </div>
           </div>
         </Body>

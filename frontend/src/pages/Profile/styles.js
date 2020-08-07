@@ -18,6 +18,10 @@ export const Container = styled.div`
       color: white;
       margin: 0 0 10px;
 
+      &:focus {
+        border: 2px solid rgba(0, 0, 0, 0.2);
+      }
+
       &::placeholder {
         color: white;
       }

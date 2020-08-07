@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { useSelector } from 'react-redux';
-import logo from '~/assets/logoHeader1.svg';
+import logo from '~/assets/logoHeader.svg';
 import Notifications from '~/components/Notifications';
 import { Link } from 'react-router-dom';
 import { Container, Content, Profile } from './styles';
