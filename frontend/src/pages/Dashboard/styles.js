@@ -27,10 +27,12 @@ export const Container = styled.div`
 `;
 
 export const Time = styled.li`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   padding: 20px;
   border-radius: 4px;
   background: #fff;
-
   opacity: ${(props) => (props.past ? 0.6 : 1)};
 
   strong {
@@ -44,5 +46,11 @@ export const Time = styled.li`
     display: block;
     margin-top: 3px;
     color: ${(props) => (props.available ? '#999' : '#666')};
+  }
+
+  div.left {
+    margin-right: 20px;
+    padding-right: 20px;
+    border-right: 1px solid rgb(0, 0, 0, 0.3);
   }
 `;

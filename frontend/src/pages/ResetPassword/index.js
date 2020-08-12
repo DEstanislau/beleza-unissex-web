@@ -27,7 +27,7 @@ export default function ResetPassword() {
       <div className="div-hr">
         <h2>
           {' '}
-          Preencha o campo abaixo com seus dados cadastrados que enviaremos
+          Preencha os campos com seus dados cadastrados que enviaremos
           instruções para seu email em alguns minutos :)
         </h2>
       </div>

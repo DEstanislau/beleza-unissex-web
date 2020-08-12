@@ -15,10 +15,12 @@ const entry = keyframes`
 `;
 
 export const Wrapper = styled.div`
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex: 1;
   background: #f1f1f1;
+  flex-direction: column;
+  overflow: hidde;
 `;
 
 export const Content = styled.div`
@@ -29,6 +31,21 @@ export const Content = styled.div`
   text-align: center;
   width: 100%;
   max-width: 640%;
+
+  @media (max-width: 1400px) {
+    flex-direction: column;
+  }
+
+  div.wrapper-div {
+    display: flex;
+    flex-direction: column;
+    height: 15%;
+    display: none;
+
+    h1 {
+      justify-content: flex-end;
+    }
+  }
 
   form {
     display: flex;
@@ -119,7 +136,4 @@ export const Background = styled.div`
   flex: 2;
   background: url(${backgroundImg}) no-repeat;
   background-size: cover;
-  -webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
-  -moz-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
-  box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
 `;

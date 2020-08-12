@@ -16,12 +16,19 @@ export default createGlobalStyle`
   }
 
   html, body, #root{
-    height: 100%;
+    background: #ececec;
+    height:100%;
     overflow: hidden;
+
+
+    @media(max-width: 1400px){
+      overflow: visible;
+    }
   }
 
   body{
     -webkit-font-smoothing: antialiased;
+
   }
 
   body, input, button {

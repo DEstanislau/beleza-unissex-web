@@ -7,6 +7,7 @@ import SignUp from '~/pages/SignUp';
 import ResetPassword from '~/pages/ResetPassword';
 
 import Dashboard from '~/pages/Dashboard';
+import Products from '~/pages/Products';
 import Profile from '~/pages/Profile';
 
 export default function Routes() {
@@ -16,6 +17,7 @@ export default function Routes() {
       <Route path="/register" component={SignUp} />
       <Route path="/reset" component={ResetPassword} />
       <Route path="/dashboard" component={Dashboard} isPrivate />
+      <Route path="/products" component={Products} isPrivate />
       <Route path="/profile" component={Profile} isPrivate />
     </Switch>
   );

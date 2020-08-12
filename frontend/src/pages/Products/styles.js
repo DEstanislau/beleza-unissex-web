@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Textarea as TextAreaUnform } from '@rocketseat/unform';
 import { lighten } from 'polished';
 
 export const Container = styled.div`
@@ -8,10 +9,6 @@ export const Container = styled.div`
 
   h1 {
     align-self: center;
-  }
-
-  h3 {
-    font-size: 50px;
   }
 
   form {
@@ -26,7 +23,7 @@ export const Container = styled.div`
       height: 44px;
       padding: 0 15px;
       color: rgba(255, 255, 255, 255);
-      margin: 0 0 10px;
+      margin: 20px;
 
       &:focus {
         border: 2px solid black;
@@ -53,53 +50,16 @@ export const Container = styled.div`
   }
 `;
 
-export const Header = styled.div`
-  display: flex;
-  flex: 1;
-  justify-content: center;
-  align-items: center;
-  margin: 20px;
-`;
-
 export const Body = styled.div`
   display: flex;
   flex: 1;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 
-  @media (max-width: 950px) {
-    flex-direction: column;
-  }
-
-  div.left {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    margin: 0 30px 0 30px;
-    max-width: 600px;
-  }
-
-  div.right {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    margin: 0 30px 0 30px;
-    max-width: 600px;
-  }
-
-  div.address-number {
-    display: flex;
-    flex: 1;
-    flex-direction: row;
-
-    input.nb1 {
-      width: 850px;
-      margin-right: 20px;
-    }
-
-    input.nb2 {
-      width: 60px;
-    }
+  div.down {
+    width: 0%;
+    margin: 20px;
   }
 `;
 
@@ -112,11 +72,9 @@ export const Bottom = styled.div`
   margin: 20px;
 
   button.att {
-    min-width: 200px;
-    max-width: 300px;
     margin: 10px;
     height: 44px;
-    max-width: 300px;
+    width: 300px;
     background: ${lighten(0.1, '#002f55')};
     font-weight: bold;
     color: #fff;
@@ -129,22 +87,22 @@ export const Bottom = styled.div`
       background: #002f55;
     }
   }
+`;
 
-  button.logout {
-    min-width: 200px;
-    max-width: 300px;
-    margin: 10px;
-    height: 44px;
-    background: ${lighten(0.1, '#B22222')};
+export const Textarea = styled(TextAreaUnform)`
+  background: rgba(0, 0, 0, 0.4);
+  border: 0;
+  border-radius: 4px;
+  padding: 0 15px;
+  color: rgba(255, 255, 255, 255);
+  margin: 20px;
+
+  &:focus {
+    border: 2px solid black;
+  }
+
+  &::placeholder {
+    color: white;
     font-weight: bold;
-    color: #fff;
-    border: 0;
-    border-radius: 4px;
-    font-size: 16px;
-    transition: background 0.2s;
-
-    &:hover {
-      background: #b22222;
-    }
   }
 `;

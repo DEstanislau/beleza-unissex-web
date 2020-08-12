@@ -72,10 +72,16 @@ export default function Dashboard() {
       <ul>
         {schedule.map((time) => (
           <Time key={time.time} past={time.past} available={!time.appointment}>
-            <strong>{time.time}</strong>
-            <span>
-              {time.appointment ? time.appointment.user.name : 'Em aberto'}
-            </span>
+            <div className="left">
+              <strong>{time.time}</strong>
+              <span>
+                {time.appointment ? time.appointment.user.name : 'Em aberto'}
+              </span>
+            </div>
+            <div className="right">
+              <strong>{time.appointment ? 'Serviço: ' : ''} </strong>
+              <span>{time.appointment ? 'Corte na Máquina' : ''} </span>
+            </div>
           </Time>
         ))}
       </ul>

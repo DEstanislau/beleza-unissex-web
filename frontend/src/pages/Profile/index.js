@@ -40,6 +40,9 @@ export default function Profile() {
 
   return (
     <Container>
+      <hr />
+      <h1> Dados Pessoais </h1>
+      <hr />
       <Form initialData={profile} onSubmit={handleSubmit}>
         <Header>
           <AvatarInput name="avatar_id" />

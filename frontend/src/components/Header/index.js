@@ -15,6 +15,7 @@ export default function Header() {
         <nav>
           <img src={logo} height="50" width="50" alt="Logo Finder" />
           <Link to="/dashboard">AGENDAMENTOS</Link>
+          <Link to="/products">SERVIÇOS</Link>
         </nav>
 
         <aside>
