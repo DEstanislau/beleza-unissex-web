@@ -37,7 +37,7 @@ export const Time = styled.li`
 
   strong {
     display: block;
-    color: ${(props) => (props.available ? '#999' : '#f64c75')};
+    color: ${(props) => (props.available ? '#999' : '#ff892e')};
     font-size: 20px;
     font-weight: normal;
   }
