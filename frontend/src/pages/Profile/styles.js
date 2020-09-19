@@ -29,8 +29,12 @@ export const Container = styled.div`
       margin: 0 0 10px;
 
       &:focus {
-        border: 2px solid black;
+        border-bottom: 1px solid #002f55;
       }
+      /* &:focus {
+        border: 1px solid black;
+        background-color: rgba(0, 0, 0, 0.4);
+      } */
 
       &::placeholder {
         color: white;
@@ -99,6 +103,15 @@ export const Body = styled.div`
 
     input.nb2 {
       width: 60px;
+    }
+
+    input.nb3 {
+      width: 50%;
+      margin-right: 10px;
+    }
+
+    input.nb4 {
+      width: 50%;
     }
   }
 `;

@@ -17,3 +17,10 @@ export function updateProfilefailure() {
     type: '@user/UPDATE_PROFILE_FAILURE',
   };
 }
+
+export function createProductSucess(provider_id, name_product, price) {
+  return {
+    type: '@user/CREATE_PRODUCT',
+    payload: { provider_id, name_product, price },
+  };
+}

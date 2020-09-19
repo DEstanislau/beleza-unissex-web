@@ -19,8 +19,6 @@ export default function Header() {
         </nav>
 
         <aside>
-          <Notifications />
-
           <Profile>
             <div>
               <strong>{profile.name}</strong>
@@ -34,6 +32,7 @@ export default function Header() {
               alt="Imagem de Perfil"
             />
           </Profile>
+          <Notifications />
         </aside>
       </Content>
     </Container>

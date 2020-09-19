@@ -40,15 +40,15 @@ export default function Profile() {
 
   return (
     <Container>
-      <hr />
-      <h1> Dados Pessoais </h1>
-      <hr />
+      <h1> Perfil </h1>
+
       <Form initialData={profile} onSubmit={handleSubmit}>
         <Header>
           <AvatarInput name="avatar_id" />
         </Header>
         <Body>
           <div className="left">
+            <Input name="shop_name" placeholder="Nome do Estabelecimento" />
             <Input name="name" placeholder="Nome Completo" />
             <Input name="email" type="email" placeholder="E-mail" />
 
@@ -74,10 +74,22 @@ export default function Profile() {
             />
           </div>
           <div className="right">
+            <div className="address-number">
+              <Input
+                className="nb3"
+                name="tel"
+                placeholder="Telefone, Ex: (99) 9999-9999"
+              />
+              <Input
+                className="nb4"
+                name="cel"
+                placeholder="Celular, Ex: (99) 99999-9999"
+              />
+            </div>
             <Input name="identifier" placeholder="CPF / CNPJ" disabled />
 
-            <hr />
             <Input name="cep" placeholder="CEP" />
+            <hr />
             <div className="address-number">
               <Input
                 className="nb1"

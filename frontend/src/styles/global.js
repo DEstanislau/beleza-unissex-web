@@ -18,9 +18,7 @@ export default createGlobalStyle`
   html, body, #root{
     background: #ececec;
     height:100%;
-    overflow: hidden;
-
-
+    
     @media(max-width: 1400px){
       overflow: visible;
     }

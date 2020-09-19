@@ -8,6 +8,9 @@ import { updateProfileSuccess, updateProfilefailure } from './actions';
 export function* updateProfile({ payload }) {
   try {
     const {
+      shop_name,
+      tel,
+      cel,
       name,
       email,
       identifier,
@@ -23,6 +26,9 @@ export function* updateProfile({ payload }) {
 
     const profile = Object.assign(
       {
+        shop_name,
+        tel,
+        cel,
         name,
         email,
         identifier,
@@ -48,4 +54,23 @@ export function* updateProfile({ payload }) {
   }
 }
 
-export default all([takeLatest('@user/UPDATE_PROFILE_REQUEST', updateProfile)]);
+export function* createProduct({ payload }) {
+  try {
+    const { provider_id, name_product, price } = payload;
+
+    yield call(api.post, 'products', {
+      provider_id,
+      name_product,
+      price,
+    });
+
+    toast.success('Serviço Cadastrado com Sucesso!');
+  } catch (err) {
+    toast.error('Falha na tentativa de um novo serviço');
+  }
+}
+
+export default all([
+  takeLatest('@user/UPDATE_PROFILE_REQUEST', updateProfile),
+  takeLatest('@user/CREATE_PRODUCT', createProduct),
+]);
