@@ -80,7 +80,9 @@ export default function Dashboard() {
             </div>
             <div className="right">
               <strong>{time.appointment ? 'Serviço: ' : ''} </strong>
-              <span>{time.appointment ? 'Corte na Máquina' : ''} </span>
+              <span>
+                {time.appointment ? time.appointment.product.name_product : ''}{' '}
+              </span>
             </div>
           </Time>
         ))}

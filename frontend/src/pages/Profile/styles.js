@@ -4,7 +4,9 @@ import { lighten } from 'polished';
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 50px auto;
+  margin: auto;
+  padding: 50px 50px 120px 50px;
+  background-color: #fff;
 
   h1 {
     align-self: center;
@@ -18,27 +20,39 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     margin-top: 30px;
+    background: #fff;
+    /* height: 100%; */
 
     input {
-      background: rgba(0, 0, 0, 0.4);
-      border: 0;
+      /* background: rgba(0, 0, 0, 0.4); */
+      background: #fff;
       border-radius: 4px;
       height: 44px;
+      border: 0;
       padding: 0 15px;
-      color: rgba(255, 255, 255, 255);
+      /* color: rgba(255, 255, 255, 255); */
+      color: rgba(0, 0, 0, 0.8);
       margin: 0 0 10px;
+      font-weight: bold;
+      border: 1px solid black;
+
+      &::placeholder {
+        color: rgba(0, 0, 0, 0.3);
+      }
 
       &:focus {
         border-bottom: 1px solid #002f55;
+
+        &::placeholder {
+          font-size: 10px;
+          color: #002f55;
+          font-weight: bold;
+        }
       }
       /* &:focus {
         border: 1px solid black;
         background-color: rgba(0, 0, 0, 0.4);
       } */
-
-      &::placeholder {
-        color: white;
-      }
     }
 
     span {

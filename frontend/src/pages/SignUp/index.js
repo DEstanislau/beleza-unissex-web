@@ -43,14 +43,19 @@ export default function SignUp() {
       <div className="div-hr">
         <h2>
           {' '}
-          Apresente seu trabalho para o mundo inteiro e receba clientes de todos
-          os lugares !
+          Apresente seu trabalho para o Brasil inteiro e receba clientes de
+          todos os lugares !
         </h2>
       </div>
-      <Input name="name" placeholder="Nome Completo" />
-      <Input name="identifier" placeholder="CPF / CNPJ" />
+      <Input maxLength={24} name="name" placeholder="Nome Completo" />
+      <Input maxLength={11} name="identifier" placeholder="CPF / CNPJ" />
       <Input name="email" type="email" placeholder="Email" />
-      <Input name="password" type="password" placeholder="Senha" />
+      <Input
+        minLength={6}
+        name="password"
+        type="password"
+        placeholder="Senha"
+      />
 
       <button type="submit">Criar Conta</button>
       <Link to="/"> Já tem conta? faça Login!</Link>

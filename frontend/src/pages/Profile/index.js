@@ -49,7 +49,7 @@ export default function Profile() {
         <Body>
           <div className="left">
             <Input name="shop_name" placeholder="Nome do Estabelecimento" />
-            <Input name="name" placeholder="Nome Completo" />
+            <Input maxLength={24} name="name" placeholder="Nome Completo" />
             <Input name="email" type="email" placeholder="E-mail" />
 
             <hr />
