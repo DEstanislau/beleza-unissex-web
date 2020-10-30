@@ -1,7 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 import { darken } from 'polished';
 
-import backgroundImg from '~/assets/background.jpg';
+import backgroundImg from '~/assets/background.svg';
 
 const entry = keyframes`
   from {
@@ -27,7 +27,7 @@ export const Content = styled.div`
   display: flex;
   flex: 1;
   flex-direction: row;
-  background: white;
+  background: #1f211f;
   text-align: center;
   width: 100%;
   max-width: 640%;
@@ -61,40 +61,41 @@ export const Content = styled.div`
       height: 150px;
       width: 50%;
       font-size: 10px;
-      color: rgb(0, 0, 0, 0.5);
+      color: whitesmoke;
     }
 
     h1 {
-      color: #dc656e;
+      color: orange;
       font-size: 35px;
     }
 
     input {
       border: 0;
-      border-bottom: 1px solid rgb(0, 0, 0, 0.3);
+      border-bottom: 1px solid white;
       width: 80%;
       padding: 0 15px;
-      color: #dc656e;
+      color: whitesmoke;
       font-weight: bold;
       margin: 20px;
+      background-color: #1f211f;
 
       &::placeholder {
-        color: rgb(0, 0, 0, 0.3);
+        color: whitesmoke;
       }
 
       &:focus {
-        border-bottom: 1px solid #dc656e;
+        border-bottom: 1px solid orange;
 
         &::placeholder {
           font-size: 10px;
-          color: #dc656e;
+          color: orange;
           font-weight: bold;
         }
       }
     }
 
     span {
-      color: #f64c75;
+      color: orange;
       margin: 0 0 10px;
       font-weight: bold;
     }
@@ -103,20 +104,20 @@ export const Content = styled.div`
       margin: 5px 0 0;
       height: 44px;
       width: 80%;
-      background: linear-gradient(-90deg, #92253c, ${darken(0.1, '#92253C')});
+      background: linear-gradient(-90deg, orange, ${darken(0.1, 'orange')});
       font-weight: bold;
-      color: #fff;
+      color: #333;
       border: 0;
       font-size: 16px;
       border-radius: 2px;
 
       &:hover {
-        background: linear-gradient(-90deg, ${darken(0.1, '#92253c')}, #92253c);
+        background: linear-gradient(-90deg, ${darken(0.1, 'orange')}, orange);
       }
     }
 
     a {
-      color: black;
+      color: whitesmoke;
       margin-top: 15px;
       font-size: 16px;
       opacity: 0.8;

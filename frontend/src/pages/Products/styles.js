@@ -105,7 +105,7 @@ export const ContentProducts = styled.div`
   margin: 50px auto;
   overflow: scroll;
   ::-webkit-scrollbar {
-    width: 8px;
+    width: 5px;
   }
 
   ::-webkit-scrollbar-thumb {
@@ -130,7 +130,7 @@ export const List = styled.ul`
 export const ContentList = styled.li`
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 20px;
   margin: 20px;
@@ -138,9 +138,10 @@ export const ContentList = styled.li`
   background: #002f55;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.6);
 
-  div.left {
-    margin-right: 20px;
-    padding-right: 10px;
+  div.right {
+    p {
+      visibility: hidden;
+    }
     border-right: 1px solid rgba(255, 255, 255, 0.5);
   }
 
@@ -174,6 +175,25 @@ export const Bottom = styled.div`
 
     &:hover {
       background: #002f55;
+    }
+  }
+`;
+
+export const BottomProduct = styled.div`
+  button.att {
+    margin: 10px;
+    height: 40px;
+    width: 40px;
+    background: ${lighten(0.1, '#002f55')};
+    font-weight: bold;
+    color: #fff;
+    border: 0;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background 0.2s;
+
+    &:hover {
+      background: #ff0000;
     }
   }
 `;

@@ -9,12 +9,12 @@ export function* updateProfile({ payload }) {
   try {
     const {
       shop_name,
+      cep,
       tel,
       cel,
       name,
       email,
       identifier,
-      cep,
       address,
       house_number,
       district,
@@ -28,11 +28,11 @@ export function* updateProfile({ payload }) {
       {
         shop_name,
         tel,
+        cep,
         cel,
         name,
         email,
         identifier,
-        cep,
         address,
         house_number,
         district,
