@@ -2,9 +2,11 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useField } from '@rocketseat/unform';
 import api from '~/services/api';
 import { Container } from './styles';
+import { useSelector } from 'react-redux';
 
 export default function AvatarInput() {
   const ref = useRef();
+  const profile = useSelector((state) => state.user.profile);
 
   const { defaultValue, registerField } = useField('avatar');
 
@@ -35,12 +37,7 @@ export default function AvatarInput() {
   return (
     <Container>
       <label htmlFor="avatar">
-        <img
-          src={
-            preview || 'https://api.adorable.io/avatars/50/abott@adorable.png'
-          }
-          alt=""
-        />
+        <img src={preview || `https://robohash.org/${profile.id}.png`} alt="" />
         <input
           type="file"
           id="avatar"

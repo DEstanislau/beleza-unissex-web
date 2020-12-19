@@ -15,17 +15,18 @@ const entry = keyframes`
 `;
 
 export const Wrapper = styled.div`
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex: 1;
   background: #f1f1f1;
   flex-direction: column;
-  overflow: hidde;
+  margin-bottom: -20px;
 `;
 
 export const Content = styled.div`
   display: flex;
   flex: 1;
+  height: 110vh;
   flex-direction: row;
   background: #1f211f;
   text-align: center;

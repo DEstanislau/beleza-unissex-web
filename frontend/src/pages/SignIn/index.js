@@ -28,8 +28,12 @@ export default function SignIn() {
         <div className="div-hr">
           <h2>
             {' '}
-            Caso tenha esquecido sua senha, fique a vontade para recupera-la
-            clicando <Link to="/reset"> aqui </Link>{' '}
+            Caso tenha esquecido sua senha, fique a vontade para recuperá-la
+            clicando{' '}
+            <Link to="/reset" style={{ color: 'orange' }}>
+              {' '}
+              aqui{' '}
+            </Link>{' '}
           </h2>
         </div>
         <Input name="email" type="email" placeholder="Email" />
